@@ -1,0 +1,36 @@
+body {
+  background-color: #102e50;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 156px;
+  margin-right: 156px;
+}
+.navbar {
+  background-color: #f4f4f4;
+  width: 748px;
+  border-radius: 10px;
+  align-items: center;
+  width: 748px;
+  overflow: hidden;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+.navbar li {
+  padding: 8px 18px;
+  background-color: aquamarine;
+  border-radius: 8px;
+}
+.navbar a {
+  color: #333;
+  text-decoration: none;
+}
