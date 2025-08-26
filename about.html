@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>portofolio</title>
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="./images/logo.png" alt="Logo" />
+      <nav class="navbar">
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html" class="active">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./projects.html">Projects</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <main class="main" style="align-items: center; margin-top: 16px">
+      <img src="./images/picture.png" alt="picture" width="250" height="263" />
+      <section style="margin: 8px">
+        <h1
+          style="
+            font-size: 36px;
+            font-weight: bold;
+            color: #f5c45e;
+            margin: 0;
+            text-align: center;
+          "
+        >
+          About Me
+        </h1>
+
+        <h5 style="font-size: 16px; color: #ffffff; max-width: 600px ; margin: 10px 0">
+          Hi, I'm Nada , a 21-year-old Computer and Control Engineering student
+          with a passion for creating digital experiences that are both
+          functional and beautiful. Currently pursuing my degree, I'm diving
+          deep into the worlds of UI/UX design and Front-End development, where
+          I combine technical precision with creative flair to build
+          user-centered solutions.
+        </h5>
+      </section>
+    </main>
+    <section style="margin-top: 0">
+      
+        <h1
+          style="
+            font-size: 36px;
+            font-weight: bold;
+            color: #f5c45e;
+            margin: 0;
+            text-align: center;
+            
+          "
+        >
+          My Skills
+        </h1>
+        <div class="skills-container">
+          <div
+          style="
+            max-width: 300px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 16px;
+          "
+        >
+          <h3>UI/UX Design</h3>
+          <div class="align">
+            User Research
+            <div class="skill-bar">
+              <div class="bar" data-progress="70%">70%</div>
+            </div>
+          </div>
+          <div class="align">
+            Wireframing & Prototyping
+            <div class="skill-bar">
+              <div class="bar" data-progress="60%">60%</div>
+            </div>
+          </div>
+          <div class="align">
+            Visual Design
+            <div class="skill-bar">
+              <div class="bar" data-progress="80%">80%</div>
+            </div>
+          </div>
+          <div class="align">
+            Design Systems
+            <div class="skill-bar">
+              <div class="bar" data-progress="70%">70%</div>
+            </div>
+          </div>
+        </div>
+        <div
+          style="
+            max-width: 300px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 16px;
+          "
+        >
+          <h3>Frontend Dev</h3>
+          <div class="align">
+            Html
+            <div class="skill-bar">
+              <div class="bar" data-progress="80%">80%</div>
+            </div>
+          </div>
+          <div class="align">
+            Css
+            <div class="skill-bar">
+              <div class="bar" data-progress="70%">70%</div>
+            </div>
+          </div>
+          <div class="align">
+            Javascript
+            <div class="skill-bar">
+              <div class="bar" data-progress="40%">40%</div>
+            </div>
+          </div>
+          <div class="align">
+            Git&GitHub
+            <div class="skill-bar">
+              <div class="bar" data-progress="50%">50%</div>
+            </div>
+          </div>
+
+        </div>
+        
+        </div>
+      </div>
+    </section>
+    
+
+    <script>
+      // Function to animate progress bars
+      function animateProgressBars() {
+        const bars = document.querySelectorAll(".bar");
+        bars.forEach((bar) => {
+          const targetProgress = parseInt(bar.getAttribute("data-progress")); // Get target percentage
+          let currentProgress = 0;
+          const increment = targetProgress / 50; // Adjust speed of animation
+          const interval = setInterval(() => {
+            if (currentProgress < targetProgress) {
+              currentProgress += increment;
+              bar.style.width = `${Math.min(currentProgress, targetProgress)}%`; // Update width
+            } else {
+              clearInterval(interval); // Stop when reaching target
+            }
+          }, 30); // Update every 30ms for smooth animation
+        });
+      }
+
+      // Run animation when the page loads
+      window.onload = animateProgressBars;
+    </script>
+  </body>
+</html>
